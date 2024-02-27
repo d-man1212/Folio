@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endpoint Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    strong {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Endpoint: /user/:email</h1>
+  <p><strong>Method:</strong> GET</p>
+  <p><strong>Purpose:</strong> To get all the details of the  user</p>
+
+  <p><strong>Response:</strong></p>
+  <pre>
+    <code>
+      {
+        "success": true,
+        "user": {
+            "_id": "65d33a5d42d3db05df9fb3e8",
+            "email": "one8.surya@gmail.com",
+            "name": "surya",
+            "lists": [
+                {
+                    "listName": "To Read",
+                    "books": [
+                        "fg",
+                        "fgfthdgvb"
+                    ],
+                    "_id": "65d33a5d42d3db05df9fb3e9"
+                },
+                {
+                    "listName": "Favorites",
+                    "books": [],
+                    "_id": "65d33a5d42d3db05df9fb3ea"
+                },
+                {
+                    "listName": "ninde",
+                    "books": [
+                        "dtgfx"
+                    ],
+                    "_id": "65d3443a994879a5ace7de14"
+                }
+            ],
+            "__v": 4
+        }
+    }
+    </code>
+  </pre>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+
+
+  <h1>Endpoint: /register/:email/:name</h1>
+  <p><strong>Method:</strong> post</p>
+  <p><strong>Purpose:</strong> to initialize the user data in the DB </p>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+  <h1>Endpoint: /createNewList/:email/:newlistName</h1>
+  <p><strong>Method:</strong> post</p>
+  <p><strong>Purpose:</strong> to create a new list( empty list without anybooks) in the user dashboard </p>
+  <pre>
+  </pre>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+  <h1>Endpoint: /addToList/:email/:listname/:bookid</h1>
+  <p><strong>Method:</strong> post</p>
+  <p><strong>Purpose:</strong> to add the books to the list which is already exixting under the user profile</p>
+
+  <p><strong>Response:</strong></p>
+  <pre>
+    
+  </pre>
+
+  
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+  <h1>Endpoint: /search/bookname/:bookname</h1>
+  <p><strong>Method:</strong> GET</p>
+
+  <h1>Endpoint: /search/bookAuthor/:authorName</h1>
+  <p><strong>Method:</strong> GET</p>
+
+  <h1>Endpoint: /search/booksByGenre/:genre</h1>
+  <p><strong>Method:</strong> GET</p>
+
+  <h1>Endpoint: /search/bookById/:id</h1>
+  <p><strong>Method:</strong> GET</p>
+
+
+  <p><strong>Purpose:</strong> To get books based on thr name , authir , id , genere (search)</p>
+
+  <pre>
+    <code>
+      {
+        "kind": "books#volumes",
+        "totalItems": 3019,
+        "items": [
+            {
+                "kind": "books#volume",
+                "id": "YrVgCgAAQBAJ",
+                "etag": "+Ch9AtjMBQc",
+                "selfLink": "https://www.googleapis.com/books/v1/volumes/YrVgCgAAQBAJ",
+                "volumeInfo": {
+                    "title": "Ready, Set, Live!",
+                    "subtitle": "Empowering Strategies for an Enlightened Life",
+                    "authors": [
+                        "Janet Bray Attwood",
+                        "Marci Shimoff",
+                        "Chris Attwood",
+                        "Geoff Affleck"
+                    ],
+                    "publisher": "Morgan James Publishing",
+                    "publishedDate": "2015-08-25",
+                    "description": "An inspirational guide for overcoming adversity and leading a fulfilled life, with contributions by more than two dozen experts on personal transformation. Trials and difficulties are a part of life. Whether these adversities are related to one’s health, finances, career, or family, we all have burdens to work through. With wisdom from more than 25 transformational leaders, including New York Times–bestselling authors Janet Bray Attwood, Marci Shimoff and Chris Attwood, this inspiring collection offers practical advice for pushing through hardships and consciously creating the life you’ve always wanted. Here you will find engaging personal accounts punctuated with humor, deep insight, and heart-centered wisdom. These entertaining tales contain the knowledge, tools, and motivation you need to build abundance, happiness, health, and love. Covering topics from career to relationships to personal growth, this international team of authors will show you how to finally overcome some of life’s most stubborn challenges and live the life you were destined for. No matter what your circumstances, there is a way to make a change. Let Ready, Set, Live! Be your guide.",
+                    "industryIdentifiers": [
+                        {
+                            "type": "ISBN_13",
+                            "identifier": "9781630476618"
+                        },
+                        {
+                            "type": "ISBN_10",
+                            "identifier": "1630476617"
+                        }
+                    ],
+                    "readingModes": {
+                        "text": true,
+                        "image": true
+                    },
+                    "pageCount": 237,
+                    "printType": "BOOK",
+                    "categories": [
+                        "Self-Help"
+                    ],
+                    "maturityRating": "NOT_MATURE",
+                    "allowAnonLogging": false,
+                    "contentVersion": "0.7.7.0.preview.3",
+                    "panelizationSummary": {
+                        "containsEpubBubbles": false,
+                        "containsImageBubbles": false
+                    },
+                    "imageLinks": {
+                        "smallThumbnail": "http://books.google.com/books/content?id=YrVgCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                        "thumbnail": "http://books.google.com/books/content?id=YrVgCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    },
+                    "language": "en",
+                    "previewLink": "http://books.google.co.in/books?id=YrVgCgAAQBAJ&pg=PA38&dq=live&hl=&cd=1&source=gbs_api",
+                    "infoLink": "https://play.google.com/store/books/details?id=YrVgCgAAQBAJ&source=gbs_api",
+                    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=YrVgCgAAQBAJ"
+                },
+                "saleInfo": {
+                    "country": "IN",
+                    "saleability": "FOR_SALE",
+                    "isEbook": true,
+                    "listPrice": {
+                        "amount": 503.86,
+                        "currencyCode": "INR"
+                    },
+                    "retailPrice": {
+                        "amount": 251.93,
+                        "currencyCode": "INR"
+                    },
+                    "buyLink": "https://play.google.com/store/books/details?id=YrVgCgAAQBAJ&rdid=book-YrVgCgAAQBAJ&rdot=1&source=gbs_api",
+                    "offers": [
+                        {
+                            "finskyOfferType": 1,
+                            "listPrice": {
+                                "amountInMicros": 503860000,
+                                "currencyCode": "INR"
+                            },
+                            "retailPrice": {
+                                "amountInMicros": 251930000,
+                                "currencyCode": "INR"
+                            }
+                        }
+                    ]
+                },
+                "accessInfo": {
+                    "country": "IN",
+                    "viewability": "PARTIAL",
+                    "embeddable": true,
+                    "publicDomain": false,
+                    "textToSpeechPermission": "ALLOWED",
+                    "epub": {
+                        "isAvailable": true,
+                        "acsTokenLink": "http://books.google.co.in/books/download/Ready_Set_Live-sample-epub.acsm?id=YrVgCgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                    },
+                    "pdf": {
+                        "isAvailable": true,
+                        "acsTokenLink": "http://books.google.co.in/books/download/Ready_Set_Live-sample-pdf.acsm?id=YrVgCgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                    },
+                    "webReaderLink": "http://play.google.com/books/reader?id=YrVgCgAAQBAJ&hl=&source=gbs_api",
+                    "accessViewStatus": "SAMPLE",
+                    "quoteSharingAllowed": false
+                },
+                "searchInfo": {
+                    "textSnippet": "... <b>live</b> that way.” I smiled, finally able to get a word in. “So, you want me to teach you how to <b>live</b> a happy life—over lunch and before we both go back to our busy <b>lives</b> and schedules?” “Exactly!” he said with a laugh—but he wasn&#39;t joking&nbsp;..."
+                }
+            },
+            {
+                "kind": "books#volume",
+                "id": "EqU5DwAAQBAJ",
+                "etag": "KGVXxtQDsCA",
+                "selfLink": "https://www.googleapis.com/books/v1/volumes/EqU5DwAAQBAJ",
+                "volumeInfo": {
+                    "title": "Live Hope Minute",
+                    "subtitle": "365 Daily Devotions",
+                    "authors": [
+                        "Mark Smeby"
+                    ],
+                    "publisher": "BroadStreet Publishing Group LLC",
+                    "publishedDate": "2017-12-12",
+                    "description": "Become a champion of hope! As we see chaos in the world around us, we want to have hope. But what is hope, and where does it come from? Hope is more than simple optimism that things get better, or a finger-crossed wishing that things go our way. Live Hope Minute explores the life-transforming concept of true hope and how to keep a godly perspective in our current circumstances. Through these short, inspiring devotions: • Your hope will become grounded in unshakeable faith. • Your life will become marked by love that you cannot help but give away. • Your vision will grow and keep you moving toward God and his plan for your life. When you discover true hope, you will find you are building your house on the rock that will not move. Regardless of the storms and challenges you face, you can demonstrate to those around you that life is more than just what we can see or feel. Be amazed at the power and comfort God’s hope can offer.",
+                    "industryIdentifiers": [
+                        {
+                            "type": "ISBN_13",
+                            "identifier": "9781424555680"
+                        },
+                        {
+                            "type": "ISBN_10",
+                            "identifier": "142455568X"
+                        }
+                    ],
+                    "readingModes": {
+                        "text": true,
+                        "image": false
+                    },
+                    "pageCount": 384,
+                    "printType": "BOOK",
+                    "categories": [
+                        "Religion"
+                    ],
+                    "maturityRating": "NOT_MATURE",
+                    "allowAnonLogging": false,
+                    "contentVersion": "1.1.1.0.preview.2",
+                    "panelizationSummary": {
+                        "containsEpubBubbles": false,
+                        "containsImageBubbles": false
+                    },
+                    "imageLinks": {
+                        "smallThumbnail": "http://books.google.com/books/content?id=EqU5DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                        "thumbnail": "http://books.google.com/books/content?id=EqU5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    },
+                    "language": "en",
+                    "previewLink": "http://books.google.co.in/books?id=EqU5DwAAQBAJ&pg=RA5-PA9&dq=live&hl=&cd=2&source=gbs_api",
+                    "infoLink": "https://play.google.com/store/books/details?id=EqU5DwAAQBAJ&source=gbs_api",
+                    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=EqU5DwAAQBAJ"
+                },
+                "saleInfo": {
+                    "country": "IN",
+                    "saleability": "FOR_SALE",
+                    "isEbook": true,
+                    "listPrice": {
+                        "amount": 981.12,
+                        "currencyCode": "INR"
+                    },
+                    "retailPrice": {
+                        "amount": 490.56,
+                        "currencyCode": "INR"
+                    },
+                    "buyLink": "https://play.google.com/store/books/details?id=EqU5DwAAQBAJ&rdid=book-EqU5DwAAQBAJ&rdot=1&source=gbs_api",
+                    "offers": [
+                        {
+                            "finskyOfferType": 1,
+                            "listPrice": {
+                                "amountInMicros": 981120000,
+                                "currencyCode": "INR"
+                            },
+                            "retailPrice": {
+                                "amountInMicros": 490560000,
+                                "currencyCode": "INR"
+                            }
+                        }
+                    ]
+                },
+                "accessInfo": {
+                    "country": "IN",
+                    "viewability": "PARTIAL",
+                    "embeddable": true,
+                    "publicDomain": false,
+                    "textToSpeechPermission": "ALLOWED",
+                    "epub": {
+                        "isAvailable": true,
+                        "acsTokenLink": "http://books.google.co.in/books/download/Live_Hope_Minute-sample-epub.acsm?id=EqU5DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                    },
+                    "pdf": {
+                        "isAvailable": false
+                    },
+                    "webReaderLink": "http://play.google.com/books/reader?id=EqU5DwAAQBAJ&hl=&source=gbs_api",
+                    "accessViewStatus": "SAMPLE",
+                    "quoteSharingAllowed": false
+                },
+                "searchInfo": {
+                    "textSnippet": "... <b>live</b> beyond the boundaries of what&#39;s easy and comfortable? Business philosopher Jim Rohn said, “Let others lead ... <b>live</b> the life that others expect them to <b>live</b>. You belong to God, and he&#39;s empowering you to bring life, love, and hope&nbsp;..."
+                }
+            },
+    </code>
+  </pre>
+
+
+
+
+  <p>"Sorry, I can't help you with that topic. Here are some fiction books you might enjoy:\n\n- \"The Picture of Dorian Gray\", \"Oscar Wilde\"\n- \"The Road\", \"Cormac McCarthy\"\n- \"The Book Thief\", \"Markus Zusak\"\n- \"The Sun Also Rises\", \"Ernest Hemingway\"\n- \"The Name of the Wind\", \"Patrick Rothfuss\"\n- \"The Bell Jar\", \"Sylvia Plath\"\n- \"The Handmaid's Tale\", \"Margaret Atwood\"\n- \"The Goldfinch\", \"Donna Tartt\"\n- \"The Shadow of the Wind\", \"Carlos Ruiz Zafón\"\n- \"One Hundred Years of Solitude\", \"Gabriel García Márquez\"\n\nI hope you find these recommendations enjoyable! Let me know if you need more suggestions."</p>
+
+  
+
+
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+  <h1>Endpoint: /bookmyUserQuery/:inputString</h1>
+  <p><strong>Method:</strong> GET</p>
+  <p><strong>Purpose:</strong> To get all the details THE relevant boks Sample : /bookmyUserQuery/give me books on love</p>
+
+  <p><strong>Response:</strong></p>
+  <pre>
+    <code>
+        {
+            "generatedResponse": "Certainly! Here are some fiction books you might enjoy: - "Pride and Prejudice", "Jane Austen" - "Romeo and Juliet", "William Shakespeare" - "Jane Eyre", "Charlotte Bronte" - "The Notebook", "Nicholas Sparks" - "Gone with the Wind", "Margaret Mitchell" - "The Fault in Our Stars", "John Green" - "A Walk to Remember", "Nicholas Sparks" - "P.S. I Love You", "Cecelia Ahern" - "Me Before You", "Jojo Moyes" - "The Time Traveler's Wife", "Audrey Niffenegger" hope you find these recommendations enjoyable! Let me know if you need more suggestions."
+            }
+    </code>
+  </pre>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+
+
+  <h1>Endpoint: /analyseUserReview/:userQuery</h1>
+  <p><strong>Method:</strong> GET</p>
+  <p><strong>Purpose:</strong> to get the positive and the negative values based in the user review ( basicallty it will give the marks to the positve and negative marks based  onthe review</p>
+
+  <p><strong>Response:</strong></p>
+  <pre>
+    <code>
+        [
+        [
+        {
+        "label": "positive",
+        "score": 0.989227294921875
+        },
+        {
+        "label": "neutral",
+        "score": 0.00933584664016962
+        },
+        {
+        "label": "negative",
+        "score": 0.001436783466488123
+        }
+        ]
+        ]
+    </code>
+  </pre>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+  <h1>Endpoint: /review/createReview/:bookid/:review</h1>
+  <p><strong>Method:</strong> post</p>
+  <p><strong>Purpose:</strong> to save the review of the the particular book </p>
+
+  <p><strong>Response:</strong></p>
+  <pre>
+    <code>
+    </code>
+  </pre>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <h1>Endpoint: /review/getReviews/:bookid</h1>
+  <p><strong>Method:</strong> get</p>
+  <p><strong>Purpose:</strong> to get the reviws of the particular book using the book id</p>
+
+  <p><strong>Response:</strong></p>
+  <pre>
+    <code>
+        [
+    {
+        "review": "it is very nice",
+        "positiveScore": 0.9745283126831055,
+        "_id": "65d3d253226d9898de6bf619"
+    },
+    {
+        "review": "it is very bad",
+        "positiveScore": 0.009685437195003033,
+        "_id": "65d3e262226d9898de6bf61d"
+    }
+]
+
+    </code>
+  </pre>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+  <h1>Endpoint: /review/getaveragereview/:bookid</h1>
+  <p><strong>Method:</strong> get</p>
+  <p><strong>Purpose:</strong> to get the rating based on all users review ( not on rating ) out of 100 %</p>
+
+  <p><strong>Response:</strong></p>
+  <pre>
+    <code>
+        {
+            "averagePositiveScore": "49.2"
+        }
+    </code>
+  </pre>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
